@@ -28,7 +28,7 @@ h2 {
   border: 1px solid lightgray;
   background-color: whitesmoke;
   font-size: 1rem;
-  width: 70%;
+  width: 100%;
 }
 
 .new-task > button {

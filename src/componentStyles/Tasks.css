@@ -1,0 +1,11 @@
+.tasks {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.no-task {
+  padding: 3rem 0 0 0;
+  color: gray;
+  align-self: center;
+}

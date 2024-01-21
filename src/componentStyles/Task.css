@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .task > div:first-child {
@@ -28,7 +29,7 @@ input[type="checkbox"] {
   border-radius: 5px;
 }
 .action-btns > button:hover {
-  background-color: var(--hover-blue);
+  background-color: var(--hover-gray);
 }
 .action-btns > button > img {
   width: 25px;

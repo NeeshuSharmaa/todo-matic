@@ -1,0 +1,36 @@
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+}
+.task label {
+  font-size: 1.25rem;
+}
+.action-btns {
+  display: flex;
+  gap: 1rem;
+}
+.action-btns > button {
+  padding: 0.5rem;
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 5px;
+}
+.action-btns > button:hover {
+  background-color: var(--hover-blue);
+}
+.action-btns > button > img {
+  width: 25px;
+  height: 25px;
+}

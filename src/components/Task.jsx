@@ -1,3 +1,5 @@
+import "../componentStyles/Task.css";
+
 export default function Task() {
   return (
     <div className="task">

@@ -1,11 +1,11 @@
 import "../componentStyles/Task.css";
 
-export default function Task() {
+export default function Task({ id, name }) {
   return (
     <div className="task">
       <div>
-        <input id="" type="checkbox" />
-        <label htmlFor="">task1</label>
+        <input id={id} type="checkbox" />
+        <label htmlFor={id}>{name}</label>
       </div>
       <div className="action-btns">
         <button>

@@ -22,7 +22,12 @@ const tasksSlice = createSlice({
       state.tasks = state.tasks.filter(({ id: ID }) => ID !== payload.id);
       localStorage.setItem("tasks", JSON.stringify(state.tasks));
     },
-    editTask: (state, { payload }) => {},
+    editTask: (state, { payload }) => {
+      state.tasks = state.tasks.map((task) =>
+        task.id === payload.id ? { ...task, name: payload.name } : task
+      );
+      localStorage.setItem("tasks", JSON.stringify(state.tasks));
+    },
     updateTaskStatus: (state, { payload }) => {
       state.tasks = state.tasks.map((task) =>
         task.id === payload.id

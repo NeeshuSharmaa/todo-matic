@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  position: relative;
 }
 
 .task > div:first-child {
@@ -34,4 +35,26 @@ input[type="checkbox"] {
 .action-btns > button > img {
   width: 25px;
   height: 25px;
+}
+
+.modal {
+  background: white;
+  position: absolute;
+  padding: 2px 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.modal > input {
+  border: none;
+  border-bottom: 2px solid gray;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  color: gray;
+}
+.modal > input:focus {
+  outline: none;
+  border-bottom: 2px solid var(--primary-blue);
 }

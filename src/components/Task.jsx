@@ -7,6 +7,14 @@ import { useState } from "react";
 export default function Task({ id, name, completed }) {
   const [editActive, setEditActive] = useState(false);
   const dispatch = useDispatch();
+
+  const truncate = (taskName) => {
+    if (taskName.length > 20) {
+      return `${taskName.substring(0, 20)} ...`;
+    } else {
+      return taskName;
+    }
+  };
   return (
     <div className="task">
       <div>
@@ -18,7 +26,7 @@ export default function Task({ id, name, completed }) {
             dispatch(updateTaskStatus({ id, completed: e.target.checked }))
           }
         />
-        <label htmlFor={id}>{name}</label>
+        <label htmlFor={id}>{truncate(name)}</label>
       </div>
       <div className="action-btns">
         <button>

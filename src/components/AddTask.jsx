@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { taskCreated } from "../features/tasksSlice";
+import { createTask } from "../features/tasksSlice";
 
 export default function AddTask() {
   const [input, setInput] = useState("");
@@ -9,7 +9,7 @@ export default function AddTask() {
 
   const addTaskHandler = () => {
     if (input) {
-      dispatch(taskCreated({ task: input }));
+      dispatch(createTask({ task: input }));
       setInput("");
     } else {
       setWarning(true);

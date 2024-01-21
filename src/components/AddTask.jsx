@@ -4,11 +4,16 @@ import { taskCreated } from "../features/tasksSlice";
 
 export default function AddTask() {
   const [input, setInput] = useState("");
+  const [warning, setWarning] = useState(false);
   const dispatch = useDispatch();
 
   const addTaskHandler = () => {
-    dispatch(taskCreated({ task: input }));
-    setInput("");
+    if (input) {
+      dispatch(taskCreated({ task: input }));
+      setInput("");
+    } else {
+      setWarning(true);
+    }
   };
   return (
     <div className="new-task">
@@ -18,7 +23,10 @@ export default function AddTask() {
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
-      <button onClick={addTaskHandler}>Add</button>
+      <button id="add-btn" onClick={addTaskHandler}>
+        Add
+      </button>
+      {warning && <small>Fill in some task first then add!!</small>}
     </div>
   );
 }

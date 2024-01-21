@@ -1,3 +1,5 @@
+import "../componentStyles/Hero.css";
+
 export default function Hero() {
   return (
     <div className="hero">
@@ -8,9 +10,9 @@ export default function Hero() {
         <button>Add</button>
       </div>
       <div className="filters">
-        <button>All tasks</button>
-        <button>Active Tasks</button>
-        <button>Completed Tasks</button>
+        <button className="active">Show All tasks</button>
+        <button>Show Active Tasks</button>
+        <button>Show Completed Tasks</button>
       </div>
     </div>
   );

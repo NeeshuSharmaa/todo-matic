@@ -13,10 +13,13 @@ export default function AddTask() {
       setInput("");
     } else {
       setWarning(true);
+      setTimeout(() => {
+        setWarning(false);
+      }, 2000);
     }
   };
   return (
-    <div className="new-task">
+    <div className="add-task">
       <input
         type="text"
         placeholder="Create Task ....."
@@ -26,7 +29,7 @@ export default function AddTask() {
       <button id="add-btn" onClick={addTaskHandler}>
         Add
       </button>
-      {warning && <small>Fill in some task first then add!!</small>}
+      {warning && <small>Input the task first then click add!!</small>}
     </div>
   );
 }

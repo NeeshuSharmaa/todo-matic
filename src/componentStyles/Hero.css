@@ -16,13 +16,14 @@
 h2 {
   padding: 1rem 2rem;
 }
-.new-task {
+.add-task {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 0 2rem 1rem 2rem;
+  padding: 0 2rem 2rem 2rem;
 }
-.new-task > input {
+.add-task > input {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   border: 1px solid lightgray;
@@ -31,7 +32,7 @@ h2 {
   width: 100%;
 }
 
-.new-task > button {
+.add-task > button {
   background-color: var(--primary-blue);
   font-size: 1rem;
   padding: 0.5rem 1.25rem;
@@ -39,12 +40,19 @@ h2 {
   border: none;
   border-radius: 5px;
 }
-.new-task > button:hover {
+.add-task > button:hover {
   background-color: var(--hover-blue);
 }
-.new-task > input:focus {
+.add-task > input:focus {
   border: 1px solid var(--primary-blue);
   outline: none;
+}
+
+.add-task > small {
+  position: absolute;
+  bottom: 0;
+  padding: 0.25rem 0.5rem;
+  color: coral;
 }
 
 .filters {

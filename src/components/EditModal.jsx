@@ -18,7 +18,7 @@ export default function EditModal({ id, name, setEditActive }) {
         onChange={(e) => setInput(e.target.value)}
       />
       <div className="action-btns">
-        <button onClick={handleSave}>Save Changes</button>
+        <button onClick={handleSave}>Save</button>
         <button onClick={() => setEditActive(false)}>Cancel</button>
       </div>
     </div>

@@ -18,12 +18,20 @@ button {
   display: flex;
   justify-content: center;
   height: 100vh;
-  width: 100vw;
 }
 .main {
-  width: max-content;
   border-right: 1px solid lightgray;
   border-left: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
-  border-radius: 5px;
+  overflow-y: scroll;
+}
+
+@media screen and (max-width: 600px) {
+  .app {
+    padding: 0;
+  }
+  .main {
+    border: none;
+    width: 100%;
+  }
 }

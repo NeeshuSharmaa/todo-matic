@@ -40,12 +40,11 @@ input[type="checkbox"] {
 .modal {
   background: white;
   position: absolute;
-  padding: 2px 0;
+  padding: 4px 0;
   left: 0;
   right: 0;
   display: flex;
   justify-content: space-between;
-  width: 100%;
 }
 .modal > input {
   border: none;
@@ -57,4 +56,14 @@ input[type="checkbox"] {
 .modal > input:focus {
   outline: none;
   border-bottom: 2px solid var(--primary-blue);
+}
+@media screen and (max-width: 600px) {
+  .task label {
+    font-size: 1rem;
+  }
+
+  .modal > input {
+    font-size: 1rem;
+    width: 50%;
+  }
 }

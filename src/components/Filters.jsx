@@ -13,19 +13,19 @@ export default function Filters() {
         className={filter.allTasks ? "active" : ""}
         onClick={() => dispatch(showAll())}
       >
-        Show All tasks ({tasks.length})
+        All tasks ({tasks.length})
       </button>
       <button
         className={filter.activeTasks ? "active" : ""}
         onClick={() => dispatch(showActive())}
       >
-        Show Active Tasks ({noOfActiveTasks})
+        Active Tasks ({noOfActiveTasks})
       </button>
       <button
         className={filter.completedTasks ? "active" : ""}
         onClick={() => dispatch(showCompleted())}
       >
-        Show Completed Tasks ({noOfCompletedTasks})
+        Completed Tasks ({noOfCompletedTasks})
       </button>
     </div>
   );
